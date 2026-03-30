@@ -1,0 +1,11 @@
+
+[[pages]]
+path = "pages/2_P2.py"
+name = "競品數據分析平台"
+icon = "📕"
+
+[[pages]]
+path = "pages/1_P1.py"
+name = "Ai内容分析系統"
+icon = "📕"
+
