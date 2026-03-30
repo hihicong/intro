@@ -1,7 +1,6 @@
 #%%
 import streamlit as st
 #from ST_menu import menu
-from gemini_analysis import Genai
 from io import StringIO
 import pandas as pd
 import toml
