@@ -7,18 +7,21 @@ import toml
 import importlib.util
 from st_pages import add_page_title, get_nav_from_toml
 
-
-
-
 def main():
-    st.set_page_config(
-        page_title="AI應用分析",
-        page_icon="✨")
+    st.set_page_config(page_title="AI應用分析", page_icon="✨")
 
-    # 讀取整個 config
-    nav = get_nav_from_toml(".streamlit/pages.toml")
-    pg = st.navigation(nav)
-    # add_page_title(nav)
+    config = toml.load(".streamlit/pages.toml")
+
+    pages = [
+        st.Page(
+            page["path"],
+            title=page["name"],
+            icon=page.get("icon", None)
+        )
+        for page in config["pages"]
+    ]
+
+    pg = st.navigation(pages)
     pg.run()
 
 
