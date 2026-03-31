@@ -3,7 +3,7 @@ import streamlit as st
 import toml
 
 def main():
-    st.set_page_config(page_title="AI應用分析", page_icon="✨")
+    st.set_page_config(page_title="專案介紹", page_icon="💻")
 
     config = toml.load(".streamlit/pages.toml")
 
